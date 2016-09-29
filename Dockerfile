@@ -10,5 +10,5 @@ RUN apt-get -y install lazarus libusb-dev libsane-dev
 ADD entrypoint /
 RUN chmod +x /entrypoint
 VOLUME ["/etc/gitlab-runner", "/home/gitlab-runner"]
-ENTRYPOINT ["/usr/bin/dumb-init", "/entrypoint"]
+#ENTRYPOINT ["/usr/bin/dumb-init", "/entrypoint"]
 CMD ["run", "--user=gitlab-runner", "--working-directory=/home/gitlab-runner"]
