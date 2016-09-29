@@ -1,6 +1,5 @@
 FROM ubuntu:15.10 
 MAINTAINER Christian Ulrich
-RUN chmod +x /usr/bin/dumb-init
 RUN apt-get update -y && \
     apt-get upgrade -y && \
     apt-get install -y wget && \
