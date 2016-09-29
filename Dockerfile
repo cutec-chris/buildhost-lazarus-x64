@@ -1,4 +1,4 @@
-FROM ubuntu:16.04 
+FROM ubuntu:15.10 
 MAINTAINER Christian Ulrich
 ADD https://github.com/Yelp/dumb-init/releases/download/v1.0.2/dumb-init_1.0.2_amd64 /usr/bin/dumb-init
 RUN chmod +x /usr/bin/dumb-init
@@ -23,6 +23,3 @@ RUN chmod +x /entrypoint
 VOLUME ["/etc/gitlab-runner", "/home/gitlab-runner"]
 ENTRYPOINT ["/usr/bin/dumb-init", "/entrypoint"]
 CMD ["run", "--user=gitlab-runner", "--working-directory=/home/gitlab-runner"]
-
-RUN apt-get update
-RUN apt-get install -y lazarus libusb-dev libsane-dev
