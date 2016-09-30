@@ -8,5 +8,5 @@ RUN chmod +x /usr/local/bin/gitlab-ci-multi-runner
 RUN useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
 RUN apt-get -y install lazarus libusb-dev libsane-dev
 VOLUME ["/etc/gitlab-runner", "/home/gitlab-runner"]
-ENTRYPOINT ["/bin/bash", "/entrypoint"]
+ENTRYPOINT ["/bin/bash"]
 CMD ["run", "--user=gitlab-runner", "--working-directory=/home/gitlab-runner"]
