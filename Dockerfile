@@ -1,4 +1,4 @@
-FROM ubuntu:15.10 
+FROM debian:latest
 MAINTAINER Christian Ulrich
 RUN apt-get update -y && \
     apt-get upgrade -y && \
