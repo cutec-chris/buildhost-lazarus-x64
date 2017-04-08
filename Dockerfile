@@ -2,8 +2,7 @@ FROM debian:latest
 MAINTAINER Christian Ulrich
 
 RUN apt-get -y update && \ 
-    apt-get -y upgrade && \ 
-    apt-get -y install fpc make binutils build-essential subversion zip unzip wget libusb-dev libsane-dev sqlite3 postgresql-client binutils libgtk2.0-0 libgtk2.0-dev psmisc
+    apt-get -y install fpc binutils build-essential zip unzip wget libusb-dev libsane-dev sqlite3 postgresql-client binutils libgtk2.0-0 libgtk2.0-dev psmisc
 
 RUN echo "Downloading and installing Debians" && \
     cd /tmp && \
