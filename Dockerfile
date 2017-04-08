@@ -3,9 +3,9 @@ MAINTAINER Christian Ulrich
 RUN apt-get -y update && \ 
     apt-get -y upgrade && \ 
     apt-get -y install make binutils build-essential subversion zip unzip wget libusb-dev libsane-dev sqlite3 postgresql-client && \ 
-    cd /tmp && \ 
-    mkdir fpcSetup && \ 
-    cd fpcSetup && \ 
+    cd /tmp 
+RUN mkdir fpcSetup && \ 
+    cd fpcSetup && \
     wget https://github.com/LongDirtyAnimAlf/Reiniero-fpcup/releases/download/1.2.0j/fpcup-$(uname -m)-linux && \ 
     chmod +x fpcup-$(uname -m)-linux && \ 
     ./fpcup-$(uname -m)-linux --noconfirm --fpcURL="2.6.4" --fpcOPT="-O4" --crossOPT="-O4" clean && \ 
