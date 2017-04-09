@@ -15,5 +15,5 @@ RUN wget -O /usr/local/bin/gitlab-ci-multi-runner https://gitlab-ci-multi-runner
     chmod +x /usr/local/bin/gitlab-ci-multi-runner &&\
     useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
 
-RUN apt-get clean && apt-get autoremove -y
+#RUN apt-get clean && apt-get autoremove -y
 VOLUME ["/etc/gitlab-runner", "/home/gitlab-runner"]
