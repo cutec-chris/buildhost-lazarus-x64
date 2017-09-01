@@ -6,4 +6,6 @@ RUN apt-get -y update && \
 RUN apt-get clean && apt-get autoremove -y
 
 RUN svn co http://svn.freepascal.org/svn/lazarus/branches/fixes_1_6 lazarus
-RUN cd lazarus
+RUN cd lazarus && \
+    make bigide && \
+    make install
