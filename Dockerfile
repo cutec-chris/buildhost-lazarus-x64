@@ -6,7 +6,7 @@ RUN apt-get -y update && \
 RUN apt-get clean && apt-get autoremove -y
 
 RUN cd /tmp
-RUN svn checkout http://svn.freepascal.org/svn/lazarus/trunk/ lazarus
+RUN svn co http://svn.freepascal.org/svn/lazarus/branches/fixes_1_6 lazarus
 RUN cd lazarus
 RUN make bigide
 RUN make install
