@@ -1,5 +1,9 @@
 Lazarus Build VM for Linux x64
 ------------------------------
+ 
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Quick Start](#quick-start)0
 
 With this Docker image you can build Lazarus Applications without installing Lazarus or Freepascal
 
